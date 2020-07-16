@@ -1,19 +1,19 @@
 import React from 'react';
+import './app.css';
+import styled from "styled-components";
+import Header from "./components/Header";
+import Footer from "./components/Footer";
+
+const Layout = styled.div`
+  margin: 32px 120px 0 120px;
+`;
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <Layout>
+      <Header />
+      <Footer />
+    </Layout>
   );
 }
 
