@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components';
+import ago from 's-ago';
 import { 
     JobsCardDiv,
     JobsCardImg,
@@ -22,7 +22,7 @@ type JobsCardProps = {
     created_at: string
 }
 
-const job = {}
+const jobs = []
 
 const JobsCard = ({company, title, type, location, created_at}: JobsCardProps) => (
     <JobsCardDiv>
@@ -40,7 +40,7 @@ const JobsCard = ({company, title, type, location, created_at}: JobsCardProps) =
                 </JobsCardLocation>
                 <JobsCardCreated>
                     <span className="material-icons" style={{ fontSize: 15 }}>schedule</span>
-                    <span>{created_at}</span>
+                    <span>{ago(new Date(created_at))}</span>
                 </JobsCardCreated>
             </RightSide>
         </Wrapper>
@@ -49,7 +49,7 @@ const JobsCard = ({company, title, type, location, created_at}: JobsCardProps) =
 
 const JobsList = () => (
     <ListComp id='jobslist'>
-        <JobsCard {...job}/>
+        {jobs.map(job => (<JobsCard {...job} />))}
     </ListComp>
 )
 
