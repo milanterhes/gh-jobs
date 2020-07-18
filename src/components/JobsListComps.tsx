@@ -18,6 +18,8 @@ export const JobsCardDiv = styled.div`
     align-items: center;
     justify-content: center;
     font-family: Roboto;
+    background: #FFFFFF;
+    margin: 16px 0;
 `
 
 export const JobsCardImg = () => {
