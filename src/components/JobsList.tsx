@@ -85,7 +85,7 @@ const JobsCard = ({company, title, type, location, created_at}: JobsCardProps) =
 
 const JobsList = () => (
     <ListComp id='jobslist'>
-        {jobs.map(job => (<JobsCard {...job} />))}
+        {jobs.map(job => (<JobsCard key={job.id} {...job} />))}
     </ListComp>
 )
 
